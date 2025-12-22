@@ -57,3 +57,28 @@ let var2 = null;
 console.log(var2);
 console.log(typeof var2); //null - object - A value that means “no value on purpose”
 //You say: “There is no value intentionally” - you want to clear or intentionally set no value.
+
+
+//--------------------------------------------------------------------------------------
+
+//Q5 - Hoisting
+//Hoisting is JavaScript’s behavior of moving variable and function declarations to the top of their scope before code execution.
+//Only declarations are hoisted, not assignments.
+//function declarations are hoisted completely.
+//Variable Hoisting with var (Partially Hoisted ⚠️)
+//let and const Hoisting (Temporal Dead Zone ⚠️)
+
+console.log(foo); // foo is not defined
+foo = 1;
+
+console.log(fomo); //undefined
+var fomo = 2;
+
+var foo;
+foo = 3;
+console.log(foo); //3
+
+console.log(b); // ❌ ReferenceError - Cannot access 'b' before initialization
+let b = 20; 
+
+//--------------------------------------------------------------------------------------
