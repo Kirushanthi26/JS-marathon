@@ -43,3 +43,17 @@ console.log(activeUsers)
 //Q3 - sort users by age descending  
 const ageDesc = users.sort((a, b) => b.age - a.age).map(user => user.name)
 console.log(ageDesc)
+
+//--------------------------------------------------------------------------------------
+
+//Q4 - null and undefined
+
+let var1;
+console.log(var1);
+console.log(typeof var1); // undefined - A variable exists, but no value is assigned yet 
+//👉 JavaScript says: “I don’t know the value yet”
+
+let var2 = null;
+console.log(var2);
+console.log(typeof var2); //null - object - A value that means “no value on purpose”
+//You say: “There is no value intentionally” - you want to clear or intentionally set no value.
