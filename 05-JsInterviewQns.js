@@ -37,3 +37,9 @@ for (const character of strReversal) {
 }
 
 //------------------------------------------------------
+
+//Q5 - palindrome
+const palindromeWord = "abba"
+console.log(palindromeWord == palindromeWord.split('').reverse().join('') )
+
+//------------------------------------------------------
