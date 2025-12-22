@@ -23,3 +23,19 @@ const nameSet = users.map(user => user.name)
 console.log(nameSet)
 
 //--------------------------------------------------------------------------------------
+//Q2 - get back only active users 
+
+//way1 
+for (const user of users) {
+    if (user.isActive) {
+        console.log(user.name)
+    }
+}
+
+//way2
+//filter() keeps only the items that match a condition
+//map() loop through an array and create a new array.
+const activeUsers = users.filter((user) => user.isActive).map(user => user.name)
+console.log(activeUsers)
+
+
