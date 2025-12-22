@@ -32,4 +32,8 @@ console.log(fizzBuzz(15))
 const strReversal = "Greetings!"
 console.log(strReversal.split('').reverse().join(''))
 
+for (const character of strReversal) {
+    console.log( character)
+}
+
 //------------------------------------------------------
