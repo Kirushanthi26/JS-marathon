@@ -20,4 +20,16 @@ console.log(fizzBuzz(15))
 
 //------------------------------------------------------
 
-//Q2 
+//Q2 - fibonacci series
+
+//------------------------------------------------------
+
+//Q3 - recursive solution 
+
+//------------------------------------------------------
+
+//Q4 - String Reversal
+const strReversal = "Greetings!"
+console.log(strReversal.split('').reverse().join(''))
+
+//------------------------------------------------------
