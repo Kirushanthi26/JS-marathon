@@ -54,3 +54,17 @@ const palindromeWord = "abba"
 console.log(palindromeWord == palindromeWord.split('').reverse().join('') )
 
 //------------------------------------------------------
+
+//Q6 - reverse Int 
+
+const reverseInt = -15
+
+const reversed = parseInt(Math.abs(reverseInt).toString().split('').reverse().join(''))
+
+console.log(reversed * Math.sign(reverseInt))
+
+//------------------------------------------------------
+//Q5 - 
+
+
+//------------------------------------------------------
