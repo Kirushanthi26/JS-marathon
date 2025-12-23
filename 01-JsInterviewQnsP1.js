@@ -78,7 +78,45 @@ var foo;
 foo = 3;
 console.log(foo); //3
 
-console.log(b); // ❌ ReferenceError - Cannot access 'b' before initialization
+//console.log(b); // ❌ ReferenceError - Cannot access 'b' before initialization
 let b = 20; 
 
 //--------------------------------------------------------------------------------------
+
+// Q6 - Closures
+//Create a counter function which has increment and getValue functionality
+/**
+ *A closure is a JavaScript feature that allows a function to access variables from its outer scope, even after the outer function has finished executing.
+Closures are commonly used for data hiding and encapsulation, because they allow us to keep variables private and prevent them from being changed directly.
+ */
+
+const privateCount = () => {
+    let count = 0
+
+    return {
+        increment: (val = 1) => {
+            count += val
+        },
+
+        getValue: () => {
+            return count
+        }
+    }
+}
+
+const counter = privateCount();
+console.log(counter.getValue()); // 0
+counter.increment();
+console.log(counter.getValue()); //1
+
+
+//Create a function which stores a secret string inside which is not accessible but is returned only when we call this function.
+
+const privateSecret = () => {
+    let secret = "foo";
+
+    return () => secret
+}
+
+const getSecret = privateSecret()
+console.log(getSecret()) // 'secret
