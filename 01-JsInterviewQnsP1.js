@@ -149,3 +149,22 @@ console.log(multiply(2)(3));
 
 //--------------------------------------------------------------------------------------
 
+// Q7 - Array 
+
+//Adding Elements to the Array
+//Write a function which get's an array and an element and returns an array with this element at the end.
+
+const numbers = [1,2]; 
+
+const append = (arr, el) => {
+    // arr.push(el) - modifies the original array(mutation)
+    //return arr
+
+    return [...arr, el] // Original array is safe, New array is created
+
+    //We should not change original data, should create a new array instead - good way
+}
+
+const newNumbers = append(numbers, 4); 
+console.log(newNumbers);
+console.log(numbers)
