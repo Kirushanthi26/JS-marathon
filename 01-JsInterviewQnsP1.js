@@ -202,3 +202,13 @@ const isNameExists = (user, list) => {
 }
 
 console.log(isNameExists('Jack', users_new)); 
+
+
+// Q10 - Write a function which removes all duplicates from the array
+const uniqueArr = (arr) => {
+    //Set is not an array, it will return a Set object - new Set(arr)
+
+    return [...new Set(arr)]
+}
+
+console.log(uniqueArr([1, 1, 2])); //[1,2]
