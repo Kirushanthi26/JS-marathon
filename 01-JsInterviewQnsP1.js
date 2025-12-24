@@ -183,3 +183,22 @@ const result = mergeArrays(arr1, arr2);
 console.log(result);
 console.log(arr1)
 console.log(arr2)
+
+
+// Q9 -  Write a function which accepts a list of users and a name to check if such user exists in the array
+
+const users_new = [ 
+{id: 1, name: 'Jack', isActive: true}, 
+{id: 2, name: 'John', isActive: true}, 
+{id: 3, name: 'Mike', isActive: false}, 
+]; 
+
+const isNameExists = (user, list) => {
+
+    //find() - return object or undefined
+    //some() - return true / false
+    //filter() - return array
+    return list.some((u) => u.name === user)
+}
+
+console.log(isNameExists('Jack', users_new)); 
