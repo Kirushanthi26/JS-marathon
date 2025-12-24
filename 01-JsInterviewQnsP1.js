@@ -212,3 +212,23 @@ const uniqueArr = (arr) => {
 }
 
 console.log(uniqueArr([1, 1, 2])); //[1,2]
+
+
+// Q11 -  Sort the array of numbers
+console.log([3, 5, 1].sort((a, b) => a - b))
+
+// Q12 -  Sort an array of objects by author's last name
+const books = [ 
+{name: 'Harry Potter', author: 'Joanne Rowling'}, 
+{name: 'War cross', author: 'Marie Lu'}, 
+{name: 'THe Hunger Games', author: 'Suzanne Collins'} 
+];
+
+books.sort((a, b) => {
+    const lastName1 = a.author.split(' ')[1]
+    const lastName2 = b.author.split(' ')[1]
+
+    return lastName1 < lastName2 ? -1 : 1
+})
+
+console.log(books)
