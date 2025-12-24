@@ -120,3 +120,32 @@ const privateSecret = () => {
 
 const getSecret = privateSecret()
 console.log(getSecret()) // 'secret
+
+
+//--------------------------------------------------------------------------------------
+
+// Q7 - Currying - breaking a function with many arguments into many functions that take one argument.
+//Normal Function ---- fn(a, b)
+//Curried Function --- fn(a)(b)
+
+// Write a function which helps to achieve multiply(a)(b) and returns multiplication of a and b
+
+//way 1
+// function multiply(a){
+//     return function (b) {
+//        return a * b
+//     }
+// }
+
+//way2 
+const multiply = (a) => {
+    return (b) => {
+        return a*b
+    }
+}
+
+console.log(multiply(2)(3));
+
+
+//--------------------------------------------------------------------------------------
+
