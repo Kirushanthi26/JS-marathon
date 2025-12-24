@@ -168,3 +168,18 @@ const append = (arr, el) => {
 const newNumbers = append(numbers, 4); 
 console.log(newNumbers);
 console.log(numbers)
+
+
+// Q8 - Write a function which can concatenate 2 arrays
+const arr1 = [1]; 
+const arr2 = [2,3]; 
+
+const mergeArrays = (a, b) => {
+    // return a.concat(b) - way 1
+    return [...a, ...b] //way 2
+}
+
+const result = mergeArrays(arr1, arr2); 
+console.log(result);
+console.log(arr1)
+console.log(arr2)
