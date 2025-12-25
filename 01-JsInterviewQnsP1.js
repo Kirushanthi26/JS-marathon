@@ -232,3 +232,16 @@ books.sort((a, b) => {
 })
 
 console.log(books)
+
+
+//--------------------------------------------------------------------------------------
+
+// Q13 -  Write a function which implements a range
+const range = (a, b) => {
+    //Creates a new array from something that looks like an array.
+    //length - Create an array with 5 empty slots
+    //mapping function - It runs once for each position in the array. index -> value
+    return Array.from({length: b - a + 1}, (_, i) => a + i)
+}
+
+console.log(range(5, 10)) // [1,2,3,4,5...,10]
