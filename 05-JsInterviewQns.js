@@ -64,7 +64,52 @@ const reversed = parseInt(Math.abs(reverseInt).toString().split('').reverse().jo
 console.log(reversed * Math.sign(reverseInt))
 
 //------------------------------------------------------
-//Q5 - 
+//Q7 - Max Char
 
+const maxChar = "apple1223cccccccd"
+const chars ={}
+
+for (const char of maxChar) {
+    if (!chars[char]) {
+        chars[char] = 1 //{ a: 1 }
+    } else {
+        chars[char]++;
+    }
+}
+
+ console.log(chars)
+ 
+ let maxCount = 0;
+ let highChar = null;
+ for(const key in chars){
+    console.log(chars[key])
+
+    if (chars[key] > maxCount) {
+        maxCount = chars[key]
+        highChar = key
+    }
+ }
+
+ console.log(highChar)
 
 //------------------------------------------------------
+//Q8 - Anagram
+
+const anagram = (str1, str2) => {
+    if(str1.length !== str2.length) return false
+
+    const lowcaseStr1 = str1.toLowerCase()
+    const lowcaseStr2 = str2.toLowerCase()
+
+
+    console.log(lowcaseStr1.split(""))
+    const sortedStr1 = lowcaseStr1.split("").sort().join("")
+    const sortedStr2 = lowcaseStr2.split("").sort().join("")
+
+    return sortedStr1 == sortedStr2
+}
+
+
+console.log(anagram('foo', 'ooF'))
+//------------------------------------------------------
+//Q9 - 
