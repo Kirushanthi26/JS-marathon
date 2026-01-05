@@ -111,5 +111,48 @@ const anagram = (str1, str2) => {
 
 
 console.log(anagram('foo', 'ooF'))
+
 //------------------------------------------------------
-//Q9 - 
+//Q9 - array chunking - way 1
+
+const chunk = (arr, size) => {
+    const result = [];
+    let currentChunk = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        currentChunk.push(arr[i]);
+
+        if (currentChunk.length === size) {
+            result.push(currentChunk);
+            currentChunk = [];
+        }
+    }
+
+    if (currentChunk.length > 0) {
+        result.push(currentChunk);
+    }
+
+    return result;
+}
+
+
+console.log(chunk([1,2,3,4,5], 2))
+
+
+//------------------------------------------------------
+//Q10 - array chunking - way 2
+
+const chunkTwo = (arr, size) => {
+    const chunked = []
+    let index = 0
+
+    while (index < arr.length) {
+        chunked.push(arr.slice(index, index+2))
+        index += size
+    }
+
+    return chunked
+}
+
+
+console.log(chunkTwo([1,2,3,4,5], 2))
