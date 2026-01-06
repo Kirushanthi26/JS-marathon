@@ -20,3 +20,21 @@ console.log(minArr.length)
  */
 
 //--------------------------------------------------------------------------------------
+
+//Q15 - Write a function which counts vowels in a string
+//reduce() is used to combine all values in an array into ONE value.
+//accumulator - The result so far
+//currentValue - Current item from the array
+//initialValue - Starting value
+
+const findingVowels = (str) => {
+    const vowels = [ 'a', 'e', 'i', 'o', 'u']
+
+    return str.toLowerCase().split("").reduce((acc, char) =>{
+        return vowels.includes(char) ? acc + 1 : acc
+    }, 0)
+}
+
+console.log(findingVowels("apple"))
+
+//--------------------------------------------------------------------------------------
