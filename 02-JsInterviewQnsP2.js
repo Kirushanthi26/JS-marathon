@@ -41,13 +41,9 @@ console.log(findingVowels("apple"))
 
 //Q16 - Write a function to convert a string to title case
 const capitalize = (str) => {
-
-    const sent = []
-    for (const element of str.toLowerCase().split(" ")) {
-        sent.push(element[0].toUpperCase() + element.slice(1))
-    }
-
-    return sent.join(" ")
+    return str.toLowerCase().split(" ")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ")
 }
 
 console.log(capitalize("short and Stout"))
