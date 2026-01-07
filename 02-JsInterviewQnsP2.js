@@ -49,3 +49,35 @@ const capitalize = (str) => {
 console.log(capitalize("short and Stout"))
 
 //--------------------------------------------------------------------------------------
+
+//Q17 - This
+
+//What will be logged here?
+//inside fn this will refer global obj
+function getItem() {  //fn
+    console.log(this); //global obj or window 
+} 
+getItem(); 
+
+//What will be logged here?
+// inside ibj this refer obj itself
+const item = {  //obj
+    title: 'Ball', 
+    getItem() { 
+        console.log(this); // obj variable - reference the obj 
+    } 
+} 
+
+item.getItem();
+
+
+//What will be logged here?
+//inside class this refer instance of class
+class Item {  //class
+    title = 'Ball' 
+    getItem() { 
+        console.log(this); // this obj is instant of item class
+    } 
+} 
+const itemInstant = new Item()
+itemInstant.getItem()
