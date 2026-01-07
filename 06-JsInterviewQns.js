@@ -27,3 +27,24 @@ const findingVowels = (str) => {
 }
 
 console.log(findingVowels("apple"))
+
+
+//------------------------------------------------------
+//Q13 -steps 
+
+const steps = (num) => {
+    for (let r = 0; r < num; r++) {
+        let s = ' '
+        for (let c = 0; c < num; c++) {
+            if (c <= r) {
+                s += '#'
+            }else{
+                s += ' '
+            }
+        }  
+
+        console.log(s)
+    }
+}
+
+steps(4)
