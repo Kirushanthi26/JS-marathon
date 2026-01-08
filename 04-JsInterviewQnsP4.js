@@ -20,3 +20,21 @@ const asyncFn = (callbackfn) => {
 asyncFn((message) => {
   console.log(message);
 });
+
+/**
+ * *A callback is a function passed to another function. It runs after something finishes.
+ *
+ * *Promise: I promise I will give you the result later
+ */
+
+const asyncFnPromise = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("done");
+    }, 2000);
+  });
+};
+
+asyncFnPromise().then((result) => {
+  console.log(result);
+});
