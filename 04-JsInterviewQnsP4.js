@@ -38,3 +38,22 @@ const asyncFnPromise = () => {
 asyncFnPromise().then((result) => {
   console.log(result);
 });
+
+//Async / Await : Still Promise, but looks like normal code
+
+const asyncFetchData = async () => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    if (!response.ok) {
+      throw new Error("Request failed");
+    }
+
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+asyncFetchData();
