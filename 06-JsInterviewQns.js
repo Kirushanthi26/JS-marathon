@@ -2,49 +2,50 @@
 //Q11 - Capitalize
 
 const capitalize = (words) => {
-    const joinSentence = []
-    for (const word of words.split(" ")) {
-        if (word) {
-            joinSentence.push(word[0].toUpperCase() + word.slice(1))
-        }
+  const joinSentence = [];
+  for (const word of words.split(" ")) {
+    if (word) {
+      joinSentence.push(word[0].toUpperCase() + word.slice(1));
     }
+  }
 
-    return joinSentence.join(' ')
-}
+  return joinSentence.join(" ");
+};
 
-console.log(capitalize("a short sentence"))
-
+console.log(capitalize("a short sentence"));
 
 //------------------------------------------------------
 //Q12 -Finding vowels
 
 const findingVowels = (str) => {
-     const vowels = [ 'a', 'e', 'i', 'o', 'u']
+  const vowels = ["a", "e", "i", "o", "u"];
 
-     return str.toLowerCase().split("").reduce((acc, curr) => {
-        return vowels.includes(curr) ? acc + 1 : acc
-     }, 0)
-}
+  return str
+    .toLowerCase()
+    .split("")
+    .reduce((acc, curr) => {
+      return vowels.includes(curr) ? acc + 1 : acc;
+    }, 0);
+};
 
-console.log(findingVowels("apple"))
-
+console.log(findingVowels("apple"));
 
 //------------------------------------------------------
-//Q13 -steps 
+//Q13 -steps
 
 const steps = (num) => {
-    for (let r = 0; r < num; r++) {
-        let s = ' '
-        for (let c = 0; c < num; c++) {
-            if (c <= r) {
-                s += '#'
-            }else{
-                s += ' '
-            }
-        }  
-
-        console.log(s)
+  for (let r = 0; r < num; r++) {
+    let s = " ";
+    for (let c = 0; c < num; c++) {
+      if (c <= r) {
+        s += "#";
+      } else {
+        s += " ";
+      }
     }
-}
 
-steps(4)
+    console.log(s);
+  }
+};
+
+steps(4);
